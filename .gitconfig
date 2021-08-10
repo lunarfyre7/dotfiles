@@ -1,29 +1,17 @@
 [user]
 	email = pyrareae@gmail.com
-	name = lunarfyre7
+	name = pyrareae
 [alias]
 	co = checkout
-	br = branch
 	ci = commit
 	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
 	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
 [core]
-	editor = micro
-[cola]
-	spellcheck = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[gui]
-	editor = code
-[diff]
-	tool = xxdiff
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-[includeIf "gitdir:~/Documents/Programming/lk/"]
-	path = ~/Documents/Programming/lk/.gitconfig
+	editor = vim
 [credential]
 	helper = store
 [init]
