@@ -18,3 +18,5 @@
 	defaultBranch = master
 [pull]
 	rebase = false
+[github]
+	user = pyrareae
