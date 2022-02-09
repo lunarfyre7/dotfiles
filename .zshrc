@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:/home/pyra/bin"
+export EDITOR="emacsclient -c -a '' -t"
 
 alias be="bundle exec"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
